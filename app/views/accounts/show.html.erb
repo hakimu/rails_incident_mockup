@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @account.number %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @account.priority %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @account.name %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @account.owner %>
+</p>
+
+<p>
+  <strong>Collector:</strong>
+  <%= @account.collector %>
+</p>
+
+<p>
+  <strong>Shard:</strong>
+  <%= @account.shard %>
+</p>
+
+<p>
+  <strong>Beacon:</strong>
+  <%= @account.beacon %>
+</p>
+
+<p>
+  <strong>Created:</strong>
+  <%= @account.created %>
+</p>
+
+<p>
+  <strong>Expiration:</strong>
+  <%= @account.expiration %>
+</p>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>

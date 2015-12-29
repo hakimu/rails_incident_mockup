@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Component:</strong>
+  <%= @incident.component %>
+</p>
+
+<p>
+  <strong>Collector:</strong>
+  <%= @incident.collector %>
+</p>
+
+<p>
+  <strong>Shard:</strong>
+  <%= @incident.shard %>
+</p>
+
+<p>
+  <strong>Beacon:</strong>
+  <%= @incident.beacon %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @incident.description %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @incident.message %>
+</p>
+
+<p>
+  <strong>Impact:</strong>
+  <%= @incident.impact %>
+</p>
+
+<p>
+  <strong>Severity:</strong>
+  <%= @incident.severity %>
+</p>
+
+<%= link_to 'Edit', edit_incident_path(@incident) %> |
+<%= link_to 'Back', incidents_path %>

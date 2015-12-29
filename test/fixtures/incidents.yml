@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  component: MyString
+  collector: MyString
+  shard: MyString
+  beacon: MyString
+  description: MyString
+  message: MyString
+  impact: MyString
+  severity: 1
+
+two:
+  component: MyString
+  collector: MyString
+  shard: MyString
+  beacon: MyString
+  description: MyString
+  message: MyString
+  impact: MyString
+  severity: 1
