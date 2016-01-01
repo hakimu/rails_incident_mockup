@@ -3,8 +3,13 @@ class AccountsController < ApplicationController
 
   # GET /accounts
   # GET /accounts.json
+
   def index
-    @accounts = Account.all
+    if params[:priority]
+      @accounts = Account.where(priority:[params[:priority]])
+    else
+      @accounts = Account.all
+    end
   end
 
   # GET /accounts/1

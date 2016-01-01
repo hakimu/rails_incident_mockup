@@ -1,41 +1,24 @@
-<h1>Listing accounts</h1>
+<h3>There are currently <%= @accounts.count %> accounts in the database.</h3>
+<h3>Look up active deployment customers affected by a data tier incident</h3>
+<p>Use this page to look up which customers are affected if we've had delays or downtime on a component, or to convert lists of IDs into lists of customer contact information.</p>
+<p>If both are filled in then the result set will be the intersection of the two lists.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Number</th>
-      <th>Priority</th>
-      <th>Name</th>
-      <th>Owner</th>
-      <th>Collector</th>
-      <th>Shard</th>
-      <th>Beacon</th>
-      <th>Created</th>
-      <th>Expiration</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%= form_tag(accounts_path, method: "get") do %>
+  <%= label_tag(:priority, "Sales priority:") %>
+  <%= text_field_tag(:priority, params[:priority]) %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>
 
-  <tbody>
-    <% @accounts.each do |account| %>
-      <tr>
-        <td><%= account.number %></td>
-        <td><%= account.priority %></td>
-        <td><%= account.name %></td>
-        <td><%= account.owner %></td>
-        <td><%= account.collector %></td>
-        <td><%= account.shard %></td>
-        <td><%= account.beacon %></td>
-        <td><%= account.created %></td>
-        <td><%= account.expiration %></td>
-        <td><%= link_to 'Show', account %></td>
-        <td><%= link_to 'Edit', edit_account_path(account) %></td>
-        <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @accounts.each do |account| %>
+  <tr>
+    <td><%= account.number %></td>
+    <td><%= account.priority %></td>
+    <td><%= account.name %></td>
+    <td><%= account.owner %></td>
+  </tr>
+<% end %>
 
-<br>
+<%= link_to "Go back", accounts_path %>
 
-<%= link_to 'New Account', new_account_path %>
+
+
