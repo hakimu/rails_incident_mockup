@@ -4,6 +4,7 @@ class AccountsController < ApplicationController
   # GET /accounts
   # GET /accounts.json
 
+  # Updated for search
   def index
     if params[:priority]
       @accounts = Account.where(priority:[params[:priority]])
