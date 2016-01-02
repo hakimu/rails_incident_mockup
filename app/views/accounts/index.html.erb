@@ -6,7 +6,9 @@
 <%= form_tag(accounts_path, method: "get") do %>
   <%= label_tag(:priority, "Sales priority:") %>
   <%= text_field_tag(:priority, params[:priority]) %>
-  <%= submit_tag "Search", :name => nil %>
+  <%= label_tag(:collector, "Collector:") %>
+  <%= text_field_tag(:collector, params[:collector]) %>
+  <%= submit_tag "Search", name: nil %>
 <% end %>
 
 <% @accounts.each do |account| %>

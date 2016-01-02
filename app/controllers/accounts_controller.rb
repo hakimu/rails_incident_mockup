@@ -4,10 +4,9 @@ class AccountsController < ApplicationController
   # GET /accounts
   # GET /accounts.json
 
-  # Updated for search
   def index
-    if params[:priority]
-      @accounts = Account.where(priority:[params[:priority]])
+    if params[:priority] && params[:collector]
+      @accounts = Account.where(priority:[params[:priority]], collector:[params[:collector]])
     else
       @accounts = Account.all
     end
