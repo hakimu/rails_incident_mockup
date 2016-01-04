@@ -16,6 +16,10 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'unicorn'
 
+gem 'populator'
+
+gem 'faker'
+
 gem 'newrelic_rpm'
 
 # Use jquery as the JavaScript library
