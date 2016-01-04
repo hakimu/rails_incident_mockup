@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151229065947) do
+ActiveRecord::Schema.define(version: 20160104050144) do
 
   create_table "accounts", force: true do |t|
     t.integer  "number"
@@ -19,25 +19,27 @@ ActiveRecord::Schema.define(version: 20151229065947) do
     t.string   "name"
     t.string   "owner"
     t.string   "collector"
-    t.string   "shard"
-    t.string   "beacon"
+    t.string   "agentdb"
+    t.string   "timeslice"
     t.datetime "created"
     t.datetime "expiration"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "collector_host"
   end
 
   create_table "incidents", force: true do |t|
     t.string   "component"
     t.string   "collector"
-    t.string   "shard"
-    t.string   "beacon"
+    t.string   "agentdb"
+    t.string   "timeslice"
     t.string   "description"
     t.string   "message"
     t.string   "impact"
     t.integer  "severity"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "collector_host"
   end
 
 end
